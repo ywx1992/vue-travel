@@ -34,7 +34,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
    - 定义变量variables
    - 组件style中引入 `import '~styles/variables.css'`
 
-6. header 
+6. swiper
    - 创建分支index-swiper,在分支上开发
    - 轮播图插件 `https://github.com/surmon-china/vue-awesome-swiper`
     `npm install vue-awesome-swiper@2.6.7 -S`
@@ -58,3 +58,26 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     
     由于scoped看起来很美好，但是含有很多的坑，所以，不推荐不使用scoped属性，而通过在外层dom上添加唯一的class来区分不同组件
     
+7. icons
+  
+  盒子模型的内容区域其实包括content+padding，即padding box，虽然正常情况下元素只在content内排布，但是当内容溢出到padding也是允许的，故overflow:hidden对此不做影响。
+  
+  利用这个特性，我们可以使用div的padding为图片占位，防止图片加载出现抖动现象：
+  
+    ```
+    <div class="wrapper">
+          <img class="swiper-img" src="http://img1.qunarzz.com/piao/fusion/1806/fc/e47aa3e1c67bbc02.jpg_750x200_0f3eecf8.jpg"/>
+    </div>
+    ```
+  给wrapper添加如下css特性：
+  
+      ```
+      overflow: hidden
+      width: 100%
+      height: 0
+      padding-bottom: 27.0%
+      background: #eee
+      ```
+  这样，在图片未加载时由灰色背景的div占位，图片加载后能正常显示，不会因为height为0且overflow为hidden而隐藏图片。
+  
+8. 
