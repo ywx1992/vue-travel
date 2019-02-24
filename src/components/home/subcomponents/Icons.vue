@@ -33,12 +33,12 @@ export default {
       text-align: center;
       padding-top: 0.2rem;
       img {
-        width: 60%;
+        width: 50%;
       }
       p {
         color: @textColor;
         font-size: 0.28rem;
-        padding-top: 0.1rem;
+        padding-top: 0.2rem;
       }
     }
   }

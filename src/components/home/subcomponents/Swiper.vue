@@ -33,6 +33,9 @@ export default{
     background-color: #fff !important;
   }
   .swiper {
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 32%;
     .swiper-img {
       width: 100%;
     }

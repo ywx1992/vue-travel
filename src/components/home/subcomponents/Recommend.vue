@@ -35,7 +35,7 @@ export default {
     color: @textColor;
     line-height: 0.96rem;
     text-indent: 1em;
-    margin-top: 0.2rem;
+    /*margin-top: 0.2rem;*/
     border-top: 0.2rem solid #eee;
   }
   .recommend-item {

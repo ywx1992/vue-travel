@@ -7,10 +7,12 @@
       <i class="iconfont iconsousuo"></i>
       <span>输入城市、景点、游玩主题</span>
     </div>
+    <router-link to="/city">
     <div class="header-right">
       <span>{{city}}</span>
       <i class="iconfont iconjiantou"></i>
     </div>
+    </router-link>
   </div>
 </template>
 <script>
@@ -25,8 +27,8 @@ export default {
   @import "~@/assets/styles/variables.less";
   .header {
     display: flex;
-    height: 0.86rem;
-    line-height: 0.86rem;
+    height: @headerHeight;
+    line-height: @headerHeight;
     background-color: @bgColor;
     color: #fff;
     .header-left {
@@ -47,6 +49,7 @@ export default {
     .header-right {
       width: 1.1rem;
       padding-left: 0.2rem;
+      color: #fff;
       .iconjiantou {
         font-size: 0.24rem;
         margin-left: -0.05rem;
