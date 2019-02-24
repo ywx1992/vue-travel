@@ -8,14 +8,17 @@
       <span>输入城市、景点、游玩主题</span>
     </div>
     <div class="header-right">
-      <span>城市</span>
+      <span>{{city}}</span>
       <i class="iconfont iconjiantou"></i>
     </div>
   </div>
 </template>
 <script>
 export default {
-  // name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    'city': String
+  }
 }
 </script>
 <style lang="less" scoped>

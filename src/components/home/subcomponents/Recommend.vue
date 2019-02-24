@@ -19,25 +19,10 @@
 export default {
   data () {
     return {
-      recommendList: [
-        {id: '001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1611/66/66d2a3f686830d2ea3.water.jpg_200x200_3e56a6cb.jpg',
-          title: '水之星豪华游轮',
-          desc: '阻力非常小，稳定性极佳， 适航性更强。很好的很好奥斯卡卢卡申科拉克丝拉卡拉',
-          price: 398
-        }, {id: '002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/74/748061410bd7d7a0a3.img.jpg_200x200_5c405a91.jpg',
-          title: '卡乐星球',
-          desc: '“科技版欢乐谷”，育智于乐',
-          price: 398
-        }, {id: '003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1808/47/4766ee01cea6f21aa3.water.jpg_200x200_e2a8e8ee.jpg',
-          title: '水之星豪华游轮',
-          desc: '阻力非常小，稳定性极佳， 适航性更强',
-          price: 398
-        }
-      ]
     }
+  },
+  props: {
+    recommendList: Array
   }
 }
 </script>

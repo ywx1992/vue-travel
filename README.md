@@ -84,3 +84,21 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 8. 解决text-overflow: ellipsis失效问题
    - 在 flex 项中设置 min-width: 0;
 
+9. 使用axios发送ajax请求
+   - npm install axios -S
+   
+   模拟数据/static/mock
+   
+   代理转发 index.js
+   ```
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          '^/api': '/static/mock'
+        }
+      }
+    },
+```
+
+
