@@ -44,7 +44,7 @@ export default {
       }
       p {
         color: @textColor;
-        font-size: 14px;
+        font-size: 0.28rem;
         padding-top: 0.1rem;
       }
     }

@@ -79,5 +79,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
       background: #eee
       ```
   这样，在图片未加载时由灰色背景的div占位，图片加载后能正常显示，不会因为height为0且overflow为hidden而隐藏图片。
+
   
-8. 
+8. 解决text-overflow: ellipsis失效问题
+   - 在 flex 项中设置 min-width: 0;
+

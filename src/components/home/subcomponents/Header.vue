@@ -45,7 +45,7 @@ export default {
       width: 1.1rem;
       padding-left: 0.2rem;
       .iconjiantou {
-        font-size: 12px;
+        font-size: 0.24rem;
         margin-left: -0.05rem;
       }
     }
