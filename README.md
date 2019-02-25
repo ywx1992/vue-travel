@@ -111,5 +111,16 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 11. better-scroll
 
-`npm install better-scroll -S`
+```npm install better-scroll -S
+
+  import BScroll from 'better-scroll
+  
+  this.scroll = new BScroll(this.$refs.wrapper)
+```
+
+12. 兄弟组件之间的联动
+
+
+
+
 
