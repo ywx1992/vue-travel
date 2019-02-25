@@ -128,6 +128,22 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 14. 使用keep-alive优化网页性能
 
     - activated 生命周期钩子
+    
+15. 渐变 background-image: linear-gradient( 角度 , 颜色);
+    ```
+    /*
+        控制颜色渐变的方向
+        to right -- 从左向右
+        to top -- 从下到上
+        to left -- 从右到左
+        to bottom --- 从上到下（默认值）
+    */
+    background-image: linear-gradient(to right, red, yellow, blue, green);
+    background-image: linear-gradient(to top, red, yellow, blue, green);
+    background-image: linear-gradient(to left, red, yellow, blue, green);
+    background-image: linear-gradient(to bottom, red, yellow, blue, green);
+    ```
+16. 
   
 
 

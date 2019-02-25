@@ -2,16 +2,20 @@
   <div class="recommend">
     <div class="recommend-title border-bottom">猜你喜欢</div>
     <ul>
-      <li class="recommend-item border-bottom"
-          v-for="item in recommendList"
-          :key="item.id">
+      <router-link
+        class="recommend-item border-bottom"
+        v-for="item in recommendList"
+        :key="item.id"
+        :to="'/detail/' + item.id"
+        tag="li"
+      >
         <img :src="item.imgUrl" alt="" class="item-img">
         <div class="item-content">
           <p class="title">{{item.title}}</p>
           <p class="desc">{{item.desc}}</p>
           <p class="price">&yen;<span>{{item.price}}</span> 起</p>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
