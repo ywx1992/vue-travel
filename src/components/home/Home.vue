@@ -24,15 +24,29 @@ export default{
     return {
       swiperList: [],
       iconList: [],
-      recommendList: []
+      recommendList: [],
+      lastCity: ''
+    }
+  },
+  computed: {
+    city () {
+      return this.$store.state.city
     }
   },
   created () {
+    this.lastCity = this.city
     this.getHomeInfo()
+  },
+  activated () {
+    // console.log('activated')
+    if (this.lastCity !== this.city) {
+      this.getHomeInfo()
+      this.lastCity = this.city
+    }
   },
   methods: {
     getHomeInfo () {
-      axios.get('/api/index.json')
+      axios.get('/api/index.json?city=' + this.city)
         .then(res => {
           if (res.data.ret) {
             var data = res.data.data

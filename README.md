@@ -121,9 +121,13 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 12. 兄弟组件之间的联动
 
 13. vuex 状态管理
-  - npm install vuex -S
+    - npm install vuex -S
   
-  - localStorage
+    - localStorage
+  
+14. 使用keep-alive优化网页性能
+
+    - activated 生命周期钩子
   
 
 
