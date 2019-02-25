@@ -99,6 +99,17 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
         }
       }
     },
-```
+    ```
 
+10. 
+  ```
+  li {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: -1px;
+  }
+  ```
+
+11. better-scroll
+
+`npm install better-scroll -S`
 
