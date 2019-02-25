@@ -3,82 +3,35 @@
     <div>
       <div class="area">
         <h3 class="title">当前位置</h3>
-        <div class="position">
-          北京
+        <div class="location">
+          上海
         </div>
       </div>
       <div class="area">
         <h3 class="title">热门城市</h3>
         <div class="city-list">
           <ul>
-            <li class="border-rightbottom">北京</li>
-            <li class="border-rightbottom">上海</li>
-            <li class="border-rightbottom">广州</li>
-            <li class="border-rightbottom">深圳</li>
-            <li class="border-rightbottom">香港</li>
-            <li class="border-rightbottom">天津</li>
-            <li class="border-rightbottom">重庆</li>
-            <li class="border-rightbottom">南京</li>
+            <li class="border-rightbottom"
+            v-for="item in hotCities"
+            :key="item.id">
+              {{item.name}}
+            </li>
           </ul>
         </div>
       </div>
-      <div class="area">
-        <h3 class="title">A</h3>
+      <div class="area"
+           v-for="(value, key) in cities"
+           :key="key">
+        <h3 class="title">
+          {{key}}
+        </h3>
         <div class="character-list">
           <ul>
-            <li class="border-rightbottom">北京</li>
-            <li class="border-rightbottom">香港特别行政区</li>
-            <li class="border-rightbottom">广州</li>
-            <li class="border-rightbottom">深圳</li>
-            <li class="border-rightbottom">广西壮族自治区</li>
-            <li class="border-rightbottom">天津</li>
-            <li class="border-rightbottom">重庆</li>
-            <li class="border-rightbottom">南京</li>
-          </ul>
-        </div>
-      </div>
-      <div class="area">
-        <h3 class="title">B</h3>
-        <div class="character-list">
-          <ul>
-            <li class="border-rightbottom">北京</li>
-            <li class="border-rightbottom">香港特别行政区</li>
-            <li class="border-rightbottom">广州</li>
-            <li class="border-rightbottom">深圳</li>
-            <li class="border-rightbottom">广西壮族自治区</li>
-            <li class="border-rightbottom">天津</li>
-            <li class="border-rightbottom">重庆</li>
-            <li class="border-rightbottom">南京</li>
-          </ul>
-        </div>
-      </div>
-      <div class="area">
-        <h3 class="title">C</h3>
-        <div class="character-list">
-          <ul>
-            <li class="border-rightbottom">北京</li>
-            <li class="border-rightbottom">香港特别行政区</li>
-            <li class="border-rightbottom">广州</li>
-            <li class="border-rightbottom">深圳</li>
-            <li class="border-rightbottom">广西壮族自治区</li>
-            <li class="border-rightbottom">天津</li>
-            <li class="border-rightbottom">重庆</li>
-            <li class="border-rightbottom">南京</li>
-          </ul>
-        </div>
-      </div>
-      <div class="area">
-        <h3 class="title">D</h3>
-        <div class="character-list">
-          <ul>
-            <li class="border-rightbottom">北京</li>
-            <li class="border-rightbottom">香港特别行政区</li>
-            <li class="border-rightbottom">广州</li>
-            <li class="border-rightbottom">深圳</li>
-            <li class="border-rightbottom">广西壮族自治区</li>
-            <li class="border-rightbottom">天津</li>
-            <li class="border-rightbottom">重庆</li>
-            <li class="border-rightbottom">南京</li>
+            <li class="border-rightbottom"
+            v-for="item in value"
+            :key="item.id">
+              {{item.name}}
+            </li>
           </ul>
         </div>
       </div>
@@ -92,6 +45,10 @@ export default {
     this.$nextTick(() => {
       this.scroll = new BScroll(this.$refs.wrapper)
     })
+  },
+  props: {
+    cities: Object,
+    hotCities: Array
   }
 }
 </script>
@@ -119,7 +76,7 @@ export default {
         background-color: #eee;
         text-indent: 1em;
       }
-      .position{
+      .location{
         height: .9rem;
         line-height: .9rem;
         font-size: 0.32rem;
