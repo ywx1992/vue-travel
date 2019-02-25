@@ -49,6 +49,7 @@ export default {
       position: absolute;
       top: 0;
       left: 0.19rem;
+      color: #fff;
     }
   }
   .region{

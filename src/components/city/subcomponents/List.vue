@@ -4,7 +4,7 @@
       <div class="area">
         <h3 class="title">当前位置</h3>
         <div class="location">
-          上海
+          {{this.$store.state.city}}
         </div>
       </div>
       <div class="area">
@@ -13,7 +13,8 @@
           <ul>
             <li class="border-rightbottom"
             v-for="item in hotCities"
-            :key="item.id">
+            :key="item.id"
+            @click="handleCityClick(item.name)">
               {{item.name}}
             </li>
           </ul>
@@ -31,7 +32,8 @@
           <ul>
             <li class="border-rightbottom"
             v-for="item in value"
-            :key="item.id">
+            :key="item.id"
+            @click="handleCityClick(item.name)">
               {{item.name}}
             </li>
           </ul>
@@ -54,6 +56,12 @@ export default {
         const ele = this.$refs[this.letter][0]
         this.scroll.scrollToElement(ele)
       }
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
     }
   },
   props: {

@@ -18,8 +18,10 @@
 <script>
 export default {
   name: 'HomeHeader',
-  props: {
-    'city': String
+  computed: {
+    city () {
+      return this.$store.state.city.substring(0, 4)
+    }
   }
 }
 </script>
@@ -47,8 +49,9 @@ export default {
       color: #ccc;
     }
     .header-right {
-      width: 1.1rem;
-      padding-left: 0.2rem;
+      min-width: 1rem;
+      padding:0 0.2rem;
+      text-align: center;
       color: #fff;
       .iconjiantou {
         font-size: 0.24rem;
