@@ -9,9 +9,6 @@
           538
         </div>
       </div>
-      <router-link to="/" tag="div" class="goBack">
-        <i class="iconfont iconfanhui"></i>
-      </router-link>
     </div>
     <common-gallary
       :images="images"
@@ -92,19 +89,6 @@ export default {
             font-size: .28rem;
           }
         }
-      }
-
-      .goBack {
-        position: absolute;
-        top: 0.2rem;
-        left: 0.2rem;
-        width: 0.72rem;
-        height: .72rem;
-        line-height: 0.72rem;
-        border-radius: 50%;
-        background-color: rgba(0, 0, 0, .4);
-        color: #fff;
-        text-align: center;
       }
     }
 </style>
