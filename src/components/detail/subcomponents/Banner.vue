@@ -10,15 +10,18 @@
         </div>
       </div>
     </div>
-    <common-gallary
-      :gallaryImgs="gallaryImgs"
-      v-show="showGallary"
-      @handleGallaryClose="handleGallaryClose"
-    ></common-gallary>
+    <fade-animation>
+      <common-gallary
+        :gallaryImgs="gallaryImgs"
+        v-show="showGallary"
+        @handleGallaryClose="handleGallaryClose"
+      ></common-gallary>
+    </fade-animation>
   </div>
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fadeanimation/FadeAnimation'
 export default {
   data () {
     return {
@@ -39,7 +42,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   }
 }
 </script>
