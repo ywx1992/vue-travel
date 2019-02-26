@@ -4,7 +4,7 @@
       <div class="swiper">
         <swiper :options="swiperOption">
           <!-- slides -->
-          <swiper-slide v-for="(item, index) in images" :key="index">
+          <swiper-slide v-for="(item, index) in gallaryImgs" :key="index">
             <img class="gallary-img" :src="item" alt="">
           </swiper-slide>
           <!-- Optional controls -->
@@ -27,7 +27,7 @@ export default {
     }
   },
   props: {
-    images: Array
+    gallaryImgs: Array
   },
   methods: {
     handleGallaryClick () {
@@ -38,6 +38,7 @@ export default {
 </script>
 <style lang="less" scoped>
   .gallary {
+    z-index: 99;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,7 +49,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     .container{
-      overflow: hidden;
+      /*overflow: hidden;*/
       height: 0;
       padding-bottom: 100%;
       .gallary-img{
@@ -59,6 +60,7 @@ export default {
         .swiper-pagination{
           bottom: -2rem;
           color: #fff;
+          z-index: 100;
         }
       }
     }

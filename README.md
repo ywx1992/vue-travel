@@ -143,8 +143,15 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     background-image: linear-gradient(to left, red, yellow, blue, green);
     background-image: linear-gradient(to bottom, red, yellow, blue, green);
     ```
-16. 
-  
+16. 全局事件解绑
+   ```
+   deactivated () {
+       window.removeEventListener('scroll', this.handleScroll)
+   }
+   ```
+ 
+17. 递归组件
+    -  
 
 
 

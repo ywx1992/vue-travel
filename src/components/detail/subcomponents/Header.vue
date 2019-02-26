@@ -37,6 +37,9 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -56,6 +59,7 @@ export default {
       text-align: center;
     }
     .header-fixed{
+      z-index: 99;
       height: @headerHeight;
       line-height: @headerHeight;
       text-align: center;
